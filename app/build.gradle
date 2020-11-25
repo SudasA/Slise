@@ -9,6 +9,10 @@ android {
 
     defaultConfig {
         applicationId "by.app.slise"
+//        при создании проекта при выборе минимальной sdk есть кнопка help me choose. Нажав на нее видно какой
+//        процена пользователей сейчас на какой версии Android. Поставив минимальной версией 28у
+//        ты указал, что твое приложение работает только на Android 9-11.
+//        чаще всего минимальной версией выбирают 21ю
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
