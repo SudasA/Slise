@@ -21,7 +21,10 @@ class FragmentMoviesList : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         val item = view.findViewById<View>(R.id.itemMovies)
+
 
         item.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
