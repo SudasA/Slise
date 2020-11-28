@@ -1,8 +1,6 @@
 package by.app.slise
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -10,12 +8,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView: TextView = findViewById(R.id.TextMain)
-        textView.setOnClickListener { moveToNextScreen() }
-    }
+          supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, FragmentMoviesList())
+                .commit()
 
-    private fun moveToNextScreen(){
-        val intent = Intent(this, MovieDetailsActivity::class.java)
-        startActivity(intent)
+
     }
 }
