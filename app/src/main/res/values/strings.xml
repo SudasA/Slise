@@ -19,7 +19,6 @@
     <!--    не говорящее название у строки. лучше что-то наподобие age_rating_13-->
     <string name="_13">13+</string>
     <string name="back">Back</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="movies_list">Movies List</string>
     <string name="_125_reviews">125 Reviews</string>
