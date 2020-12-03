@@ -47,7 +47,7 @@ class MoviesFragment : Fragment() {
 
     private fun doOnClick(actor: Actor) {
         recycler?.let { rv ->
-            Snackbar.make(
+           Snackbar.make(
                 rv,
                 getString(R.string.fragment_actors_chosen_text, actor.name),
                 Snackbar.LENGTH_SHORT)
