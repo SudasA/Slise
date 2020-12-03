@@ -19,13 +19,12 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:src="@drawable/gradient_background"
             android:scaleType="centerCrop"
-            android:background="@drawable/gradient_background"
-            android:src="@drawable/back"
+            android:background="@drawable/back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -80,14 +79,14 @@ margin не задавать
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:scaleType="centerCrop"
             android:singleLine="false"
             android:text="@string/avengers_movie_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:textColor="@color/whitecolor"
-            android:textSize="40sp"
+            android:textSize="@dimen/text_big"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -101,7 +100,7 @@ margin не задавать
             android:layout_marginEnd="16dp"
             android:text="@string/action_adventure_fantasy"
             android:textColor="@color/pinkcolor"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -122,10 +121,11 @@ margin не задавать
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:lineHeight="20sp"
             android:text="@string/reviews"
             android:textAllCaps="true"
             android:textColor="#6D6D80"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_medium"
             android:textStyle="normal"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -140,7 +140,7 @@ margin не задавать
             android:layout_marginEnd="16dp"
             android:text="@string/storyline"
             android:textColor="@color/textonecolor"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_medium"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,9 +154,10 @@ margin не задавать
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:alpha="0.75"
             android:text="@string/after"
-            android:textColor="@color/texttwocolor"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -167,11 +168,11 @@ margin не задавать
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"
             android:text="@string/cast"
             android:textColor="@color/textonecolor"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_medium"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -186,8 +187,10 @@ margin не задавать
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView11"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:srcCompat="@drawable/robert" />
@@ -200,6 +203,7 @@ margin не задавать
             android:text="@string/robert_downey_jr"
             android:textColor="@color/whcolor"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -207,8 +211,10 @@ margin не задавать
             android:id="@+id/imageView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView12"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:srcCompat="@drawable/chrise" />
@@ -222,6 +228,7 @@ margin не задавать
             android:text="@string/chris_evans"
             android:textColor="@color/whcolor"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/imageView13"
             app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -230,8 +237,10 @@ margin не задавать
             android:id="@+id/imageView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView11"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:srcCompat="@drawable/mark" />
@@ -245,6 +254,7 @@ margin не задавать
             android:text="@string/mark_ruffalo"
             android:textColor="@color/whcolor"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
             app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
@@ -252,8 +262,10 @@ margin не задавать
             android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:srcCompat="@drawable/chrish" />
@@ -267,6 +279,7 @@ margin не задавать
             android:text="@string/chris_hemsworth"
             android:textColor="@color/whcolor"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/imageView12"
             app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
@@ -276,9 +289,9 @@ margin не задавать
             android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_corners"
             android:text="@string/_13"
             android:textColor="@color/whcolor"
-            android:background="@drawable/rounded_corners"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -321,6 +334,27 @@ margin не задавать
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="249dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
         <!--Без отступа от низа экрана смотрится не очень красиво.
 Я бы предложил сделать горизонтальный гайдлайн с отступом 16. Для консистентности с боковыми
 отступами и общего внешнего вида. И нижнюю границу имен актеров выровнять по нему-->
