@@ -4,6 +4,17 @@
 
     <solid android:color="@color/maincolor" />
 
+    <gradient android:startColor="#404056" android:endColor="#222232"
+        android:angle="270"/>
+
+    <stroke
+        android:width="1dip"
+        android:color="#454545"
+        >
+    </stroke>
+
+    <padding android:left="1dp" android:top="1dp" android:right="1dp"
+        android:bottom="1dp" />
 
     <corners
         android:bottomLeftRadius="6dp"
