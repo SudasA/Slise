@@ -1,6 +1,6 @@
 package by.app.slise.ActorsRecyclerView
 
-data class Actor (
-        val actorView : Int,
-        val actorName : String
+data class Actors(
+        val actorView: String,
+        val actorName: String
 )

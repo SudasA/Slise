@@ -12,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 
 class MoviesAdapter (
     private val clickListener: OnRecyclerItemClicked
-) : RecyclerView.Adapter<ActorsViewHolder>() {
+) : RecyclerView.Adapter<MoviesViewHolder>() {
 
     private var movies = listOf<Movies>()
 
@@ -23,7 +23,7 @@ class MoviesAdapter (
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder{
         return when (viewType) {
             VIEW_TYPE_EMPTY -> EmptyViewHolder(
                 LayoutInflater.from(
@@ -38,7 +38,7 @@ class MoviesAdapter (
         }
     }
 
-    override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         when (holder) {
             is DataViewHolder -> {
                 holder.onBind(movies[position])
@@ -61,10 +61,10 @@ class MoviesAdapter (
 }
 
 
-abstract class  ActorsViewHolder (itemview: View) : RecyclerView.ViewHolder(itemview)
+abstract class MoviesViewHolder (itemview: View) : RecyclerView.ViewHolder(itemview)
 
-private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
-private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
+private class EmptyViewHolder(itemView: View) : MoviesViewHolder(itemView)
+private class DataViewHolder(itemView: View) : MoviesViewHolder(itemView) {
 
     private val avatar: ImageView = itemView.findViewById(R.id.imageView4)
     private val name: TextView = itemView.findViewById(R.id.nameOfFilms)

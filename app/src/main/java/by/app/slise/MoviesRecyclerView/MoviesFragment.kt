@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import by.app.slise.FragmentMoviesDetails
+import by.app.slise.ActorsRecyclerView.FragmentMoviesDetails
 import by.app.slise.R
 
 class MoviesFragment : Fragment() {
@@ -22,7 +22,7 @@ class MoviesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recycler = view.findViewById(R.id.rv_actors)
+        recycler = view.findViewById(R.id.rv_movies)
 
         recycler?.adapter = MoviesAdapter(clickListener)
 
@@ -42,8 +42,9 @@ class MoviesFragment : Fragment() {
 
     private fun updateData() {
         (recycler?.adapter as? MoviesAdapter)?.apply {
-            bindActors(MoviesDataSource().getActors())
+            bindActors(MoviesDataSource().getMovies())
         }
+        
     }
 
     private fun doOnClick(actor: Movies) {

@@ -1,7 +1,7 @@
 package by.app.slise.MoviesRecyclerView
 
 class MoviesDataSource {
-    fun getActors(): List<Movies> {
+    fun getMovies(): List<Movies> {
         return listOf(
 
                 Movies("Aladdin","96 min", "253 Reviews","10+", "Fantasy, Adventure","https://avatars.mds.yandex.net/get-zen_doc/62191/pub_5d700828ecfb8000ae7094c8_5d700bd29f272100ae810a92/scale_1200"),
