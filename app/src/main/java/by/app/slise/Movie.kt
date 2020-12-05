@@ -1,7 +1,7 @@
 package by.app.slise
 
 
-data class Actor(
+data class Movie(
     val nameOfFilms: String,
     val duration: String,
     val views: String,

@@ -40,11 +40,11 @@ class MoviesFragment : Fragment() {
 
     private fun updateData() {
         (recycler?.adapter as? MoviesAdapter)?.apply {
-            bindActors(ActorsDataSource().getActors())
+            bindActors(MoviesDataSource().getActors())
         }
     }
 
-    private fun doOnClick(actor: Actor) {
+    private fun doOnClick(actor: Movie) {
         recycler?.let {
             activity?.supportFragmentManager?.beginTransaction()
                     ?.replace(R.id.fragment_container, FragmentMoviesDetails())
@@ -55,7 +55,7 @@ class MoviesFragment : Fragment() {
 
 
     private val clickListener = object : OnRecyclerItemClicked {
-        override fun onClick(actor: Actor) {
+        override fun onClick(actor: Movie) {
             doOnClick(actor)
         }
     }
