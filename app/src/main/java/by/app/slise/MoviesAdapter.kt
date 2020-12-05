@@ -3,7 +3,10 @@ package by.app.slise
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class MoviesAdapter (
@@ -37,7 +40,7 @@ class MoviesAdapter (
     override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
         when (holder) {
             is DataViewHolder -> {
-              //  holder.onBind(actors[position])
+                holder.onBind(actors[position])
                 holder.itemView.setOnClickListener {
                     clickListener.onClick(actors[position])
                 }
@@ -61,8 +64,13 @@ abstract class  ActorsViewHolder (itemview: View) : RecyclerView.ViewHolder(item
 
 private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
 private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
-/*
+
     private val avatar: ImageView = itemView.findViewById(R.id.imageView4)
+    private val name: TextView = itemView.findViewById(R.id.nameOfFilms)
+    private val depricate :TextView = itemView.findViewById(R.id.TextView15)
+    private val style : TextView = itemView.findViewById(R.id.textView2)
+    private val duration : TextView = itemView.findViewById(R.id.textView13)
+    private val views : TextView = itemView.findViewById(R.id.textView12)
 
     fun onBind(actor: Actor) {
         Glide.with(context)
@@ -70,17 +78,26 @@ private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
             .apply(imageOption)
             .into(avatar)
 
+        name.text = actor.nameOfFilms
+
+        depricate.text = actor.depricate
+
+        style.text = actor.style
+
+        duration.text = actor.duration
+
+        views.text = actor.views
+
 
     }
 
- */
+
 
 
     companion object {
         private val imageOption = RequestOptions()
             .placeholder(R.drawable.ic_avatar_placeholder)
             .fallback(R.drawable.ic_avatar_placeholder)
-            .circleCrop()
     }
 }
 

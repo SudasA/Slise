@@ -3,18 +3,17 @@ package by.app.slise
 class ActorsDataSource {
     fun getActors(): List<Actor> {
         return listOf(
-            Actor("Alicia Vikander", "https://image.ibb.co/nKNBrd/Alicia_Vikander.jpg", true),
-            Actor("Amanda Seyfried", "https://image.ibb.co/j142xJ/Amanda_Seyfried.jpg", false),
-            Actor("Anne Hathaway", "https://image.ibb.co/euy6Py/Anne_Hathaway.jpg", true),
-            Actor("Emma Stone", "https://image.ibb.co/dJY6Py/Emma_Stone.jpg", true),
-            Actor("Keira Knightley", "https://image.ibb.co/cxX0jy/Keira_Knightley.jpg", false),
-            Actor("George Clooney", "https://image.ibb.co/ce1t4y/George_Clooney.jpg", true),
-            Actor("Lucy Liu", "https://image.ibb.co/dWurrd/Lucy_Liu.jpg", false),
-            Actor("Matthew McConaughey", "https://image.ibb.co/e3JHWd/Matthew_Mc_Conaughey.jpg", true),
-            Actor("Morgan Freeman", "https://image.ibb.co/h9GhxJ/Morgan_Freeman.jpg", true),
-            Actor("Ryan Gosling", "https://image.ibb.co/buLLjy/Ryan_Gosling.jpg", false),
-            Actor("Will Smith", "https://image.ibb.co/gxoUcJ/Will_Smith.jpg", false),
-            Actor("Robert de Niro", "https://image.ibb.co/e6T6Py/Robert_de_Niro.jpg", true),
+
+            Actor("Aladdin","96 min", "253 Reviews","6+", "Fantasy, Adventure","https://avatars.mds.yandex.net/get-zen_doc/62191/pub_5d700828ecfb8000ae7094c8_5d700bd29f272100ae810a92/scale_1200"),
+            Actor("John Wick: Chapter 3 – Parabellum", "84 min", "144 Reviews","18+","Thriller","https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5d700828ecfb8000ae7094c8_5d700bd2e4f39f00afaae4af/scale_1200"),
+            Actor("I Am Mother","106 min", "121 Reviews", "20+","Fantastic","https://avatars.mds.yandex.net/get-zen_doc/1921148/pub_5d700828ecfb8000ae7094c8_5d700bd23639e600adebbfa1/scale_1200"),
+            Actor("Godzilla: King of the Monsters 3","118 min", "147 Reviews", "13+","Fantastic","https://avatars.mds.yandex.net/get-zen_doc/1931664/pub_5d700828ecfb8000ae7094c8_5d700bd22f1e4400ad631685/scale_1200"),
+                Actor("Avengers: End Game","137 min", "256 Reviews", "16+","Fantasy, Adventure","https://avatars.mds.yandex.net/get-zen_doc/163667/pub_5d700828ecfb8000ae7094c8_5d700bd204af1f00ae3e8074/scale_1200"),
+            Actor("Kursk","85 min", "180 Reviews", "18+","Drama, Thriller","https://avatars.mds.yandex.net/get-zen_doc/209388/pub_5d700828ecfb8000ae7094c8_5d700bd20ef8e700ad7be222/scale_1200"),
+            Actor("4x4", "100 min", "108 Reviews","16+","Drama","https://avatars.mds.yandex.net/get-zen_doc/203431/pub_5d700828ecfb8000ae7094c8_5d700bd5f557d000ae6e35f6/scale_1200"),
+            Actor("Brightburn","114 min", "124 Reviews", "16+","Fantasy, Adventure","https://avatars.mds.yandex.net/get-zen_doc/222865/pub_5d700828ecfb8000ae7094c8_5d700bd5f73d9d00ad9c9c3a/scale_1200"),
+            Actor("X-Men: Dark Phoenix","95 min", "140 Reviews","13+", "Fantastic","https://avatars.mds.yandex.net/get-zen_doc/167204/pub_5d700828ecfb8000ae7094c8_5d700bd53f548700ae6b2e68/scale_1200"),
+            Actor("Men in Black International","127 min", "458 Reviews","14+","Fantastic", "https://avatars.mds.yandex.net/get-zen_doc/148075/pub_5d700828ecfb8000ae7094c8_5d700bd5d7859b00ad02efce/scale_1200")
         )
     }
 }

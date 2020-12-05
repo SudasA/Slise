@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemMovies"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="170dp"
+    android:layout_height="296dp"
     android:background="@drawable/rounded_corners"
-    android:layout_marginTop="102dp"
-    android:layout_marginStart="14dp"
+    android:layout_margin="11dp"
     tools:context=".FragmentMoviesList">
 
 
@@ -15,14 +14,14 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
+        android:layout_margin="4dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/_137_min"
         android:textColor="#6D6D80"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/nameOfFilms"
+        app:layout_constraintTop_toBottomOf="@+id/nameOfFilms"
         tools:ignore="SmallSp" />
 
 
@@ -38,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/imageView15"
+        android:id="@+id/TextView15"
         android:layout_width="22dp"
         android:layout_height="20dp"
         android:layout_marginStart="6dp"
@@ -103,19 +102,19 @@
     2. на макете есть отступ сверху равный 4dp-->
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/nameOfFilms"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:gravity="center_vertical"
-        android:singleLine="true"
+        android:scaleType="centerCrop"
         android:text="@string/avengers_movie_name1"
         android:textColor="@color/whitecolor"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/textView2"
