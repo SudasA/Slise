@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     android:background="@color/maincolor"
-    tools:context=".FragmentMoviesList">
+    tools:context=".MoviesRecyclerView.FragmentMoviesList">
 
     <TextView
         android:id="@+id/textView14"

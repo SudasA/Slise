@@ -7,7 +7,7 @@
     android:layout_height="296dp"
     android:background="@drawable/rounded_corners"
     android:layout_margin="11dp"
-    tools:context=".FragmentMoviesList">
+    tools:context=".MoviesRecyclerView.FragmentMoviesList">
 
 
     <TextView

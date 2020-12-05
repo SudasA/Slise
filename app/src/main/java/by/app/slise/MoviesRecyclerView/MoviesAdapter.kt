@@ -1,4 +1,4 @@
-package by.app.slise
+package by.app.slise.MoviesRecyclerView
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import by.app.slise.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -13,7 +14,7 @@ class MoviesAdapter (
     private val clickListener: OnRecyclerItemClicked
 ) : RecyclerView.Adapter<ActorsViewHolder>() {
 
-    private var movies = listOf<Movie>()
+    private var movies = listOf<Movies>()
 
     override fun getItemViewType(position: Int): Int {
         return when(movies.size) {
@@ -52,7 +53,7 @@ class MoviesAdapter (
 
     override fun getItemCount(): Int = movies.size
 
-    fun bindActors(newActors: List<Movie>) {
+    fun bindActors(newActors: List<Movies>) {
         movies = newActors
         notifyDataSetChanged()
     }
@@ -67,12 +68,12 @@ private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
 
     private val avatar: ImageView = itemView.findViewById(R.id.imageView4)
     private val name: TextView = itemView.findViewById(R.id.nameOfFilms)
-    private val depricate :TextView = itemView.findViewById(R.id.TextView15)
+    private val deprecate :TextView = itemView.findViewById(R.id.TextView15)
     private val style : TextView = itemView.findViewById(R.id.textView2)
     private val duration : TextView = itemView.findViewById(R.id.textView13)
     private val views : TextView = itemView.findViewById(R.id.textView12)
 
-    fun onBind(actor: Movie) {
+    fun onBind(actor: Movies) {
         Glide.with(context)
             .load(actor.avatar)
             .apply(imageOption)
@@ -80,7 +81,7 @@ private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
 
         name.text = actor.nameOfFilms
 
-        depricate.text = actor.depricate
+        deprecate.text = actor.deprecate
 
         style.text = actor.style
 
@@ -108,5 +109,5 @@ private const val VIEW_TYPE_EMPTY = 0
 private const val VIEW_TYPE_ACTORS = 1
 
 interface OnRecyclerItemClicked {
-    fun onClick(actor: Movie)
+    fun onClick(actor: Movies)
 }

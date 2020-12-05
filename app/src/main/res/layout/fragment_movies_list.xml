@@ -8,7 +8,7 @@
     android:background="@drawable/rounded_corners"
     android:layout_marginTop="102dp"
     android:layout_marginStart="14dp"
-    tools:context=".FragmentMoviesList">
+    tools:context=".MoviesRecyclerView.FragmentMoviesList">
 
 
     <TextView

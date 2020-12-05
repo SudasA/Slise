@@ -1,4 +1,4 @@
-package by.app.slise
+package by.app.slise.MoviesRecyclerView
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import by.app.slise.FragmentMoviesDetails
+import by.app.slise.R
 
 class MoviesFragment : Fragment() {
 
@@ -44,7 +46,7 @@ class MoviesFragment : Fragment() {
         }
     }
 
-    private fun doOnClick(actor: Movie) {
+    private fun doOnClick(actor: Movies) {
         recycler?.let {
             activity?.supportFragmentManager?.beginTransaction()
                     ?.replace(R.id.fragment_container, FragmentMoviesDetails())
@@ -55,7 +57,7 @@ class MoviesFragment : Fragment() {
 
 
     private val clickListener = object : OnRecyclerItemClicked {
-        override fun onClick(actor: Movie) {
+        override fun onClick(actor: Movies) {
             doOnClick(actor)
         }
     }
