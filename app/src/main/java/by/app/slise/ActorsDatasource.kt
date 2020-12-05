@@ -15,7 +15,6 @@ class ActorsDataSource {
             Actor("Ryan Gosling", "https://image.ibb.co/buLLjy/Ryan_Gosling.jpg", false),
             Actor("Will Smith", "https://image.ibb.co/gxoUcJ/Will_Smith.jpg", false),
             Actor("Robert de Niro", "https://image.ibb.co/e6T6Py/Robert_de_Niro.jpg", true),
-            Actor("Zoe Saldana", "https://image.ibb.co/i9WRPy/Zoe_Saldana.jpg", false)
         )
     }
 }

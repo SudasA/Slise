@@ -3,10 +3,7 @@ package by.app.slise
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class MoviesAdapter (
@@ -40,7 +37,7 @@ class MoviesAdapter (
     override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
         when (holder) {
             is DataViewHolder -> {
-                holder.onBind(actors[position])
+              //  holder.onBind(actors[position])
                 holder.itemView.setOnClickListener {
                     clickListener.onClick(actors[position])
                 }
@@ -64,10 +61,8 @@ abstract class  ActorsViewHolder (itemview: View) : RecyclerView.ViewHolder(item
 
 private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
 private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
-
-    private val avatar: ImageView = itemView.findViewById(R.id.iv_actor_avatar)
-    private val name: TextView = itemView.findViewById(R.id.tv_actor_name)
-    private val oscarState: TextView = itemView.findViewById(R.id.tv_actor_oscar_state)
+/*
+    private val avatar: ImageView = itemView.findViewById(R.id.imageView4)
 
     fun onBind(actor: Actor) {
         Glide.with(context)
@@ -75,13 +70,10 @@ private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
             .apply(imageOption)
             .into(avatar)
 
-        name.text = actor.name
 
-        oscarState.text = context.getString(
-            R.string.fragment_actors_avatar_oscar_state_text,
-            actor.hasOscar.toString()
-        )
     }
+
+ */
 
 
     companion object {
