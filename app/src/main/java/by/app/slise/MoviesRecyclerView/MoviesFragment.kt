@@ -44,7 +44,7 @@ class MoviesFragment : Fragment() {
         (recycler?.adapter as? MoviesAdapter)?.apply {
             bindActors(MoviesDataSource().getMovies())
         }
-        
+
     }
 
     private fun doOnClick(actor: Movies) {
