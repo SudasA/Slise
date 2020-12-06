@@ -3,7 +3,6 @@ package by.app.slise.MoviesRecyclerView
 class MoviesDataSource {
     fun getMovies(): List<Movies> {
         return listOf(
-
                 Movies("Aladdin","96 min", "253 Reviews","10+", "Fantasy, Adventure","https://avatars.mds.yandex.net/get-zen_doc/62191/pub_5d700828ecfb8000ae7094c8_5d700bd29f272100ae810a92/scale_1200"),
                 Movies("John Wick: Chapter 3 – Parabellum", "84 min", "144 Reviews","18+","Thriller","https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5d700828ecfb8000ae7094c8_5d700bd2e4f39f00afaae4af/scale_1200"),
                 Movies("I Am Mother","106 min", "121 Reviews", "20+","Fantastic","https://avatars.mds.yandex.net/get-zen_doc/1921148/pub_5d700828ecfb8000ae7094c8_5d700bd23639e600adebbfa1/scale_1200"),

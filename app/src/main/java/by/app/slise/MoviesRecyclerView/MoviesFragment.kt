@@ -23,20 +23,17 @@ class MoviesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recycler = view.findViewById(R.id.rv_movies)
-
         recycler?.adapter = MoviesAdapter(clickListener)
 
     }
 
     override fun onStart() {
         super.onStart()
-
         updateData()
     }
 
     override fun onDetach() {
         recycler = null
-
         super.onDetach()
     }
 

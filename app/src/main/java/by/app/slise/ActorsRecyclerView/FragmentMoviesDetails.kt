@@ -14,32 +14,19 @@ class FragmentMoviesDetails : Fragment()  {
 
     private lateinit var adapter: ActorsAdapter
 
-
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?): View? {
-
-
         return     inflater.inflate(R.layout.fragment_movies_details, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-
-
-
         val recycler: RecyclerView = view.findViewById(R.id.r_actors)
         adapter = ActorsAdapter()
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = adapter
         recycler.layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
-
-
-
-
-
     }
 
     override fun onStart() {
