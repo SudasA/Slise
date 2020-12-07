@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetailsActivity"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,6 +76,7 @@ margin не задавать
             android:text="@string/avengers_movie_name"
             android:textColor="@color/whitecolor"
             android:textSize="@dimen/text_big"
+            style="@style/RobotoNormal"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -88,6 +88,7 @@ margin не задавать
             android:layout_height="wrap_content"
             android:text="@string/action_adventure_fantasy"
             android:textColor="@color/pinkcolor"
+            style="@style/RobotoNormal"
             android:textSize="@dimen/text_medium"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintHorizontal_bias="0.0"
@@ -109,11 +110,12 @@ margin не задавать
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:lineHeight="20sp"
+            style="@style/RobotoNormal"
             android:text="@string/reviews"
             android:textAllCaps="true"
             android:textColor="#6D6D80"
             android:textSize="@dimen/text_medium"
-            android:textStyle="normal"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -152,6 +154,7 @@ margin не задавать
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:text="@string/cast"
+            style="@style/RobotoNormal"
             android:textColor="@color/textonecolor"
             android:textSize="@dimen/text_medium"
             android:textStyle="normal"
