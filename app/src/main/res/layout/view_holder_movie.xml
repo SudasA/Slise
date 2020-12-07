@@ -14,12 +14,11 @@
         android:layout_marginTop="44dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:fontFamily="@font/roboto_medium"
+        style="@style/RobotoNormal"
         android:lineHeight="20dp"
         android:text="@string/movies_list"
         android:textColor="@color/white"
         android:textSize="@dimen/text_medium"
-        android:textStyle="normal"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="48dp" />
 

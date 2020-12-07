@@ -28,7 +28,7 @@ class MoviesAdapter (
             VIEW_TYPE_EMPTY -> EmptyViewHolder(
                 LayoutInflater.from(
                     parent.context
-                ).inflate(R.layout.activity_movie_details, parent, false)
+                ).inflate(R.layout.activity_main, parent, false)
             )
             else -> DataViewHolder(
                 LayoutInflater.from(

@@ -37,4 +37,9 @@
         <item name="android:layout_marginStart">2dp</item>
     </style>
 
+    <style name="RobotoNormal">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>
