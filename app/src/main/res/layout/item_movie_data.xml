@@ -6,13 +6,14 @@
     android:id="@+id/itemMovies"
     android:layout_width="170dp"
     android:layout_height="305dp"
-    android:background="@drawable/rounded_corners"
     android:layout_margin="11dp"
+    android:background="@drawable/rounded_corners"
+
    >
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/image_like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/like"
@@ -22,22 +23,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        style="@style/RobotoNormal"
-        android:text="@string/_137_min"
-        android:textColor="@color/greycolor"
-        android:textSize="@dimen/text_small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/nameOfFilms"
-        app:layout_constraintTop_toBottomOf="@+id/nameOfFilms" />
 
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/image_font_back"
         android:background="@drawable/rounded_corners"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
@@ -48,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TextView15"
+        android:id="@+id/text_deprecate_two"
         android:layout_width="22dp"
         android:layout_height="20dp"
         android:layout_marginStart="6dp"
@@ -56,46 +45,67 @@
         android:background="@drawable/rounded_corners"
         android:text="@string/_13"
         android:textStyle="bold"
-        android:textSize="12sp"
+        android:textSize="@dimen/text_medium_small"
         android:scaleType="centerCrop"
         android:textColor="@color/whitecolor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/action_adventure_fantasy"
+        style="@style/RobotoNormal"
+        android:layout_marginTop="214dp"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/pinkcolor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="@+id/image_font_back"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/image_font_back"
+        app:layout_constraintTop_toTopOf="@+id/image_font_back"
+        tools:ignore="SmallSp" />
+
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/star_onex"
         style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/star_threex"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/staroink" />
+
+
+    <ImageView
+        android:id="@+id/star_twox"
+        style="@style/StarTwo"
+        app:layout_constraintStart_toEndOf="@+id/star_four"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
         app:srcCompat="@drawable/staroink" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/staroink" />
-
-    <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/star_threex"
         style="@style/StarTwo"
         android:layout_marginStart="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
         app:srcCompat="@drawable/staroink" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/staroink" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/star_four"
         style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/star_onex"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/staroink" />
+
+
+
+
+    <ImageView
+        android:id="@+id/star_five"
+        style="@style/StarTwo"
+        app:layout_constraintStart_toEndOf="@+id/star_twox"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
         app:srcCompat="@drawable/stargrey" />
 
     <!--            1. на макете заголовок располагается не под постером. Середина заголовка выровнена по
@@ -111,54 +121,51 @@
     2. на макете есть отступ сверху равный 4dp-->
 
 
-
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/action_adventure_fantasy"
-        style="@style/RobotoNormal"
-        android:layout_marginTop="214dp"
-        android:layout_marginStart="6dp"
-        android:textColor="@color/pinkcolor"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        tools:ignore="SmallSp" />
-
-
-
-    <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/text_reviewsx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/_125_reviews"
-        android:textColor="#6D6D80"
-        android:textSize="8sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="SmallSp" />
+        android:textColor="@color/greycolor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toEndOf="@+id/star_five"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+         />
 
 
     <TextView
-        android:id="@+id/nameOfFilms"
+        android:id="@+id/name_of_films"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:gravity="center_vertical"
         android:scaleType="centerCrop"
+        style="@style/RobotoNormal"
         android:text="@string/avengers_movie_name1"
         android:textColor="@color/whitecolor"
-        android:textSize="14sp"
+        android:textSize="@dimen/text_medium"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="@+id/image_font_back"
+        app:layout_constraintStart_toStartOf="@+id/image_font_back"
+        app:layout_constraintTop_toBottomOf="@+id/image_font_back" />
+
+
+    <TextView
+        android:id="@+id/text_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        style="@style/RobotoNormal"
+        android:text="@string/_137_min"
+        android:textColor="@color/greycolor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name_of_films"
+        app:layout_constraintTop_toBottomOf="@+id/name_of_films" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
