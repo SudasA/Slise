@@ -66,12 +66,12 @@ abstract class MoviesViewHolder (itemview: View) : RecyclerView.ViewHolder(itemv
 private class EmptyViewHolder(itemView: View) : MoviesViewHolder(itemView)
 private class DataViewHolder(itemView: View) : MoviesViewHolder(itemView) {
 
-    private val avatar: ImageView = itemView.findViewById(R.id.imageView4)
-    private val name: TextView = itemView.findViewById(R.id.nameOfFilms)
-    private val deprecate :TextView = itemView.findViewById(R.id.TextView15)
-    private val style : TextView = itemView.findViewById(R.id.textView2)
-    private val duration : TextView = itemView.findViewById(R.id.textView13)
-    private val views : TextView = itemView.findViewById(R.id.textView12)
+    private val avatar: ImageView = itemView.findViewById(R.id.image_font_back)
+    private val name: TextView = itemView.findViewById(R.id.name_of_films)
+    private val deprecate :TextView = itemView.findViewById(R.id.text_deprecate_two)
+    private val style : TextView = itemView.findViewById(R.id.text_style)
+    private val duration : TextView = itemView.findViewById(R.id.text_min)
+    private val views : TextView = itemView.findViewById(R.id.text_reviewsx)
 
     fun onBind(actor: Movies) {
         Glide.with(context)

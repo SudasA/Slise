@@ -60,8 +60,8 @@ private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
 
 class DataViewHolder(itemView: View): ActorsViewHolder(itemView){
 
-    private var avatar: ImageView= itemView.findViewById(R.id.imageView2)
-    private val name: TextView = itemView.findViewById(R.id.textView22)
+    private var avatar: ImageView= itemView.findViewById(R.id.image_actors)
+    private val name: TextView = itemView.findViewById(R.id.text_actors)
 
     fun onBind(actor: Actors) {
 
