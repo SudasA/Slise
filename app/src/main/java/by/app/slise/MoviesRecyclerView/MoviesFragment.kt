@@ -1,17 +1,19 @@
 package by.app.slise.MoviesRecyclerView
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import by.app.slise.ActorsRecyclerView.FragmentMoviesDetails
 import by.app.slise.R
 
 class MoviesFragment : Fragment() {
 
     private var recycler: RecyclerView? = null
+
+    private var movieClickListener: MovieClicklistener? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,30 +35,42 @@ class MoviesFragment : Fragment() {
     }
 
     override fun onDetach() {
-        recycler = null
         super.onDetach()
+        recycler = null
+        movieClickListener = null
     }
 
     private fun updateData() {
         (recycler?.adapter as? MoviesAdapter)?.apply {
             bindActors(MoviesDataSource().getMovies())
         }
+    }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is MovieClicklistener) {
+            movieClickListener = context
+        }
     }
 
     private fun doOnClick() {
         recycler?.let {
-            activity?.supportFragmentManager?.beginTransaction()
-                    ?.replace(R.id.fragment_container, FragmentMoviesDetails())
-                    ?.addToBackStack(MoviesFragment::class.java.name)
-                    ?.commit()
+            movieClickListener?.onStartMovieDetails()
+         //   activity?.supportFragmentManager?.beginTransaction()
+          //          ?.replace(R.id.fragment_container, FragmentMoviesDetails())
+          //          ?.addToBackStack(MoviesFragment::class.java.name)
+           //         ?.commit()
         }
     }
 
 
     private val clickListener = object : OnRecyclerItemClicked {
-        override fun onClick(actor: Movies) {
+    override fun onClick(actor: Movies) {
             doOnClick()
-        }
+       }
+    }
+
+    interface MovieClicklistener  {
+        fun onStartMovieDetails()
     }
 }
