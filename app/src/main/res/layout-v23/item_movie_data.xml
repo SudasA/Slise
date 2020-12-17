@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemMovies"
+    android:layout_width="170dp"
+    android:layout_height="305dp"
+    android:layout_margin="11dp"
+    android:background="@drawable/rounded_corners"
+
+   >
+
+
+    <ImageView
+        android:id="@+id/image_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/like"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <ImageView
+        android:id="@+id/image_font_back"
+        android:background="@drawable/rounded_corners"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/gradient_background"
+        android:src="@drawable/avengers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_deprecate_two"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:text="@string/_13"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_medium_small"
+        android:scaleType="centerCrop"
+        android:textColor="@color/whitecolor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/action_adventure_fantasy"
+        style="@style/RobotoNormal"
+        android:layout_marginTop="214dp"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/pinkcolor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="@+id/image_font_back"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/image_font_back"
+        app:layout_constraintTop_toTopOf="@+id/image_font_back"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/star_onex"
+        style="@style/StarTwo"
+        app:layout_constraintStart_toEndOf="@+id/star_threex"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/staroink" />
+
+
+    <ImageView
+        android:id="@+id/star_twox"
+        style="@style/StarTwo"
+        app:layout_constraintStart_toEndOf="@+id/star_four"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/staroink" />
+
+    <ImageView
+        android:id="@+id/star_threex"
+        style="@style/StarTwo"
+        android:layout_marginStart="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/staroink" />
+
+
+    <ImageView
+        android:id="@+id/star_four"
+        style="@style/StarTwo"
+        app:layout_constraintStart_toEndOf="@+id/star_onex"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/staroink" />
+
+
+
+
+    <ImageView
+        android:id="@+id/star_five"
+        style="@style/StarTwo"
+        app:layout_constraintStart_toEndOf="@+id/star_twox"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:srcCompat="@drawable/stargrey" />
+
+    <!--            1. на макете заголовок располагается не под постером. Середина заголовка выровнена по
+    нижнему краю постера
+    2. Если marginEnd и marginStart равны, то можно указать просто marginHorizontal. А вообще на этом экране лучше указать
+    2 вертикальных guideline с отступами от краев экрана по 16dp и привязывать элементы к ним, чтобы везде горизонтальные
+    margin не задавать
+    3. singleline false можно не указывать, так как это значение по-умолчанию-->
+
+    <!--            1. id у всез вью сейчас имеют неговорящие имена. по коду ты не сможешь понять, что за элемент
+    textView2, пока не залезешь в верстку и не посмотришь. Имена необходимо давать такие, чтобы по нему было
+    понятно, что это за вью. Здесь например это может быть movie_genres
+    2. на макете есть отступ сверху равный 4dp-->
+
+
+    <TextView
+        android:id="@+id/text_reviewsx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/_125_reviews"
+        android:textColor="@color/greycolor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toEndOf="@+id/star_five"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+         />
+
+
+    <TextView
+        android:id="@+id/name_of_films"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center_vertical"
+        android:scaleType="centerCrop"
+        style="@style/RobotoNormal"
+        android:text="@string/avengers_movie_name1"
+        android:textColor="@color/whitecolor"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/image_font_back"
+        app:layout_constraintStart_toStartOf="@+id/image_font_back"
+        app:layout_constraintTop_toBottomOf="@+id/image_font_back" />
+
+
+    <TextView
+        android:id="@+id/text_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        style="@style/RobotoNormal"
+        android:text="@string/_137_min"
+        android:textColor="@color/greycolor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name_of_films"
+        app:layout_constraintTop_toBottomOf="@+id/name_of_films" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

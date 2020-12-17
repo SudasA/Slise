@@ -15,7 +15,7 @@ android {
 //        процена пользователей сейчас на какой версии Android. Поставив минимальной версией 28у
 //        ты указал, что твое приложение работает только на Android 9-11.
 //        чаще всего минимальной версией выбирают 21ю
-        minSdkVersion 28
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
