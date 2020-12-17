@@ -20,7 +20,7 @@ class MoviesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.view_holder_movie, container, false)
+        return inflater.inflate(R.layout.fragment_movies, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,10 +56,6 @@ class MoviesFragment : Fragment() {
     private fun doOnClick() {
         recycler?.let {
             movieClickListener?.onStartMovieDetails()
-         //   activity?.supportFragmentManager?.beginTransaction()
-          //          ?.replace(R.id.fragment_container, FragmentMoviesDetails())
-          //          ?.addToBackStack(MoviesFragment::class.java.name)
-           //         ?.commit()
         }
     }
 
