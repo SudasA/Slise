@@ -9,19 +9,20 @@
     android:background="@color/maincolor"
     >
 
+
     <TextView
         android:id="@+id/text_movies_list"
-        android:layout_marginTop="44dp"
+        style="@style/RobotoNormal"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        style="@style/RobotoNormal"
-        android:lineHeight="20dp"
+        android:layout_marginTop="52dp"
+        android:paddingStart="40dp"
         android:text="@string/movies_list"
         android:textColor="@color/white"
         android:textSize="@dimen/text_medium"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="48dp" />
-
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="RtlSymmetry" />
 
     <ImageView
         android:id="@+id/image_dot"
