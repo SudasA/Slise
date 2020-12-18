@@ -46,7 +46,7 @@
             android:id="@+id/text_styleOfFilms"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/genre_action_adventure_fantasy"
+            android:text="@string/film_type"
             android:textColor="@color/pinkcolor"
             style="@style/RobotoNormal"
             android:textSize="@dimen/text_medium"
@@ -118,7 +118,6 @@ margin не задавать
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:lineHeight="20sp"
             android:lineSpacingExtra="6dp"
             style="@style/RobotoNormal"
             android:text="@string/reviews_count"
@@ -129,7 +128,6 @@ margin не задавать
             app:layout_constraintStart_toEndOf="@+id/star_five"
             app:layout_constraintTop_toBottomOf="@+id/text_styleOfFilms" />
 
-        <!--            не указан lineHeight-->
         <TextView
             android:id="@+id/text_story"
             android:layout_width="0dp"

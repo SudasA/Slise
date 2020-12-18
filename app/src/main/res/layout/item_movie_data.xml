@@ -27,14 +27,23 @@
 
     <ImageView
         android:id="@+id/image_font_back"
-        android:background="@drawable/rounded_corners"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="@drawable/gradient_background"
         android:src="@drawable/avengers"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_gradient"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <TextView
         android:id="@+id/text_deprecate_two"
@@ -43,7 +52,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corners"
-        android:text="@string/_13"
+        android:text="@string/age_rating_13"
         android:textStyle="bold"
         android:textSize="@dimen/text_medium_small"
         android:scaleType="centerCrop"
@@ -55,7 +64,7 @@
         android:id="@+id/text_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/action_adventure_fantasy"
+        android:text="@string/film_type"
         style="@style/RobotoNormal"
         android:layout_marginTop="214dp"
         android:layout_marginStart="6dp"
