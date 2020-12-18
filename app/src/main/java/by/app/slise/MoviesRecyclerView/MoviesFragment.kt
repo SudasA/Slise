@@ -13,6 +13,7 @@ class MoviesFragment : Fragment() {
 
     private var recycler: RecyclerView? = null
 
+
     private var movieClickListener: MovieClicklistener? = null
 
     override fun onCreateView(
@@ -26,7 +27,8 @@ class MoviesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recycler = view.findViewById(R.id.rv_movies)
         recycler?.adapter = MoviesAdapter(clickListener)
-
+        recycler?.setHasFixedSize(true);
+        recycler?.setItemViewCacheSize(40);
     }
 
     override fun onStart() {
