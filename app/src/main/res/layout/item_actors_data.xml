@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/robert_downey_jr"
         android:textColor="@color/whcolor"
+        android:paddingStart="20dp"
         android:textSize="@dimen/text_medium_small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
