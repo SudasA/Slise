@@ -8,8 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import by.app.slise.R
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.launch
 
 class MoviesFragment : Fragment() {
+
+    private val scope = CoroutineScope(Dispatchers.Main)
 
     private var recycler: RecyclerView? = null
 
@@ -25,10 +31,11 @@ class MoviesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recycler = view.findViewById(R.id.rv_movies)
-        recycler?.adapter = MoviesAdapter(clickListener)
-        recycler?.setHasFixedSize(true);
-        recycler?.setItemViewCacheSize(40);
+            recycler = view.findViewById(R.id.rv_movies)
+            recycler?.adapter = MoviesAdapter(clickListener)
+            recycler?.setHasFixedSize(true);
+            recycler?.setItemViewCacheSize(40);
+
     }
 
     override fun onStart() {
@@ -43,8 +50,10 @@ class MoviesFragment : Fragment() {
     }
 
     private fun updateData() {
-        (recycler?.adapter as? MoviesAdapter)?.apply {
-            bindActors(MoviesDataSource().getMovies())
+        scope.launch {
+            (recycler?.adapter as? MoviesAdapter)?.apply {
+                bindActors(MoviesDataSource().getMovies())
+            }
         }
     }
 
@@ -55,9 +64,16 @@ class MoviesFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        scope.cancel()
+    }
+
     private fun doOnClick() {
-        recycler?.let {
-            movieClickListener?.onStartMovieDetails()
+        scope.launch {
+            recycler?.let {
+                scope.launch { movieClickListener?.onStartMovieDetails() }
+            }
         }
     }
 

@@ -43,16 +43,14 @@ class MoviesAdapter (
             is DataViewHolder -> {
                 holder.onBind(movies[position])
                 holder.itemView.setOnClickListener {
-                    clickListener.onClick(movies[position])
+                    clickListener.onClick(movies[position]) }
                 }
-            }
             is EmptyViewHolder -> { /* nothing to bind */}
         }
     }
 
 
     override fun getItemCount(): Int = movies.size
-
     fun bindActors(newActors: List<Movies>) {
         movies = newActors
         notifyDataSetChanged()

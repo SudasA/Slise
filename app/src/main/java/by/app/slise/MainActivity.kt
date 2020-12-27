@@ -27,5 +27,11 @@ class MainActivity : AppCompatActivity(), FragmentMoviesDetails.MovieFragmentcki
                 .replace(R.id.fragment_container, FragmentMoviesDetails())
                 .addToBackStack(MoviesFragment::class.java.name)
                 .commit()
-    }
+        }
+    
+        /*
+                startActivity(Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("https://www.themoviedb.org/movie/")
+        })
+         */
 }
