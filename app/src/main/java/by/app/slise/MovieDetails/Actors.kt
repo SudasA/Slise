@@ -1,4 +1,4 @@
-package by.app.slise.ActorsRecyclerView
+package by.app.slise.MovieDetails
 
 data class Actors(
         val actorView: String,

@@ -1,4 +1,4 @@
-package by.app.slise.MoviesRecyclerView
+package by.app.slise.MovieList
 
 class MoviesDataSource {
     fun getMovies(): List<Movies> {

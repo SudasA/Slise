@@ -1,4 +1,4 @@
-package by.app.slise.MoviesRecyclerView
+package by.app.slise.MovieList
 
 import android.view.LayoutInflater
 import android.view.View
@@ -71,21 +71,21 @@ private class DataViewHolder(itemView: View) : MoviesViewHolder(itemView) {
     private val duration : TextView = itemView.findViewById(R.id.text_min)
     private val views : TextView = itemView.findViewById(R.id.text_reviewsx)
 
-    fun onBind(actor: Movies) {
+    fun onBind(movie: Movies) {
         Glide.with(context)
-            .load(actor.avatar)
+            .load(movie.avatar)
             .apply(imageOption)
             .into(avatar)
 
-        name.text = actor.nameOfFilms
+        name.text = movie.nameOfFilms
 
-        deprecate.text = actor.deprecate
+        deprecate.text = movie.deprecate
 
-        style.text = actor.style
+        style.text = movie.style
 
-        duration.text = actor.duration
+        duration.text = movie.duration
 
-        views.text = actor.views
+        views.text = movie.views
 
 
     }

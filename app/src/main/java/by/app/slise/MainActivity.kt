@@ -2,8 +2,8 @@ package by.app.slise
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import by.app.slise.ActorsRecyclerView.FragmentMoviesDetails
-import by.app.slise.MoviesRecyclerView.MoviesFragment
+import by.app.slise.MovieDetails.FragmentMoviesDetails
+import by.app.slise.MovieList.MoviesFragment
 
 class MainActivity : AppCompatActivity(), FragmentMoviesDetails.MovieFragmentckicklistener, MoviesFragment.MovieClicklistener {
 

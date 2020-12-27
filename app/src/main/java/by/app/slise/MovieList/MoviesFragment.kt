@@ -1,4 +1,4 @@
-package by.app.slise.MoviesRecyclerView
+package by.app.slise.MovieList
 
 import android.content.Context
 import android.os.Bundle

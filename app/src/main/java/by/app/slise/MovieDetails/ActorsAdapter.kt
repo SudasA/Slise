@@ -1,4 +1,4 @@
-package by.app.slise.ActorsRecyclerView
+package by.app.slise.MovieDetails
 
 import android.view.LayoutInflater
 import android.view.View
@@ -24,12 +24,12 @@ class ActorsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
         return when (viewType) {
-            by.app.slise.ActorsRecyclerView.VIEW_TYPE_EMPTY -> by.app.slise.ActorsRecyclerView.EmptyViewHolder(
+            by.app.slise.MovieDetails.VIEW_TYPE_EMPTY -> by.app.slise.MovieDetails.EmptyViewHolder(
                     LayoutInflater.from(
                             parent.context
                     ).inflate(R.layout.item_actors_data, parent, false)
             )
-            else -> by.app.slise.ActorsRecyclerView.DataViewHolder(
+            else -> by.app.slise.MovieDetails.DataViewHolder(
                     LayoutInflater.from(
                             parent.context
                     ).inflate(R.layout.item_actors_data, parent, false)

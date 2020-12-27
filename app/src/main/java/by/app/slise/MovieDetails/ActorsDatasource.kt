@@ -1,4 +1,4 @@
-package by.app.slise.ActorsRecyclerView
+package by.app.slise.MovieDetails
 
 
 class ActorsDatasource {
