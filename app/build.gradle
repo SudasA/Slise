@@ -1,22 +1,16 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'org.jetbrains.kotlin.plugin.serialization'
-
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "by.app.slise"
-//        при создании проекта при выборе минимальной sdk есть кнопка help me choose. Нажав на нее видно какой
-//        процена пользователей сейчас на какой версии Android. Поставив минимальной версией 28у
-//        ты указал, что твое приложение работает только на Android 9-11.
-//        чаще всего минимальной версией выбирают 21ю
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -28,7 +22,21 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
+            buildConfigField "String", "BASE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w300\""
+
+            // If you decide to play with this app more than a few times,
+            // please, create your own api key, so this one does not get banned:
+            // https://www.themoviedb.org/documentation/api
+            buildConfigField "String", "API_KEY", "\"c058d9a291e7f1dd69f97f1afac69b61\""
+        }
     }
+
+    viewBinding {
+        enabled = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -69,4 +77,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "com.squareup.retrofit2:converter-gson:2.7.2"
+    implementation "com.google.code.gson:gson:2.8.6"
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
 }

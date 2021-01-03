@@ -1,0 +1,3 @@
+package by.app.slise.entities
+
+data class Movie(val id: Int, val name: String, val thumbnail: String?)

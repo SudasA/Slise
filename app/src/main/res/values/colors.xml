@@ -12,4 +12,8 @@
     <color name="greycolor">#6D6D80</color>
     <color name="whcolor">#D8D8D8</color>
     <color name="maincolor">#191926</color>
+    <color name="colorBackground">#F3F4F5</color>
+    <color name="colorTitles">#222222</color>
+    <color name="textColorPrimary">#C7000000</color>
+    <color name="textColorSecondary">#94000000</color>
 </resources>

@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/itemMovies"
-    android:layout_width="170dp"
+    tools:context="MovieList.MoviesFragment"
+    android:id="@+id/main"
+    android:layout_width="160dp"
     android:layout_height="305dp"
     android:layout_margin="11dp"
     android:background="@drawable/rounded_corners"
@@ -26,7 +27,7 @@
 
 
     <ImageView
-        android:id="@+id/image_font_back"
+        android:id="@+id/movieThumbnail"
         android:scaleType="centerCrop"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -34,9 +35,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/avengers"
         android:adjustViewBounds="true"
-         />
+        tools:src="@drawable/ph_movie_grey_200"
+        />
 
     <ImageView
         android:id="@+id/image_gradient"
@@ -74,10 +75,10 @@
         android:layout_marginStart="6dp"
         android:textColor="@color/pinkcolor"
         android:textSize="@dimen/text_small"
-        app:layout_constraintEnd_toEndOf="@+id/image_font_back"
+        app:layout_constraintEnd_toEndOf="@+id/movieThumbnail"
         app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="@+id/image_font_back"
-        app:layout_constraintTop_toTopOf="@+id/image_font_back"
+        app:layout_constraintStart_toStartOf="@+id/movieThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/movieThumbnail"
         tools:ignore="SmallSp" />
 
     <ImageView
@@ -150,7 +151,7 @@
 
 
     <TextView
-        android:id="@+id/name_of_films"
+        android:id="@+id/movieName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
@@ -161,9 +162,9 @@
         android:textColor="@color/whitecolor"
         android:textSize="@dimen/text_medium"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/image_font_back"
-        app:layout_constraintStart_toStartOf="@+id/image_font_back"
-        app:layout_constraintTop_toBottomOf="@+id/image_font_back" />
+        app:layout_constraintEnd_toEndOf="@+id/movieThumbnail"
+        app:layout_constraintStart_toStartOf="@+id/movieThumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/movieThumbnail" />
 
 
     <TextView
@@ -176,8 +177,8 @@
         android:textColor="@color/greycolor"
         android:textSize="@dimen/text_small"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/name_of_films"
-        app:layout_constraintTop_toBottomOf="@+id/name_of_films" />
+        app:layout_constraintStart_toStartOf="@+id/movieName"
+        app:layout_constraintTop_toBottomOf="@+id/movieName" />
 
 
 
