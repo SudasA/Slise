@@ -14,5 +14,11 @@ data class MovieNetworkModel(
     val id: Int,
 
     @SerializedName("title")
-    val title: String
+    val title: String,
+
+    @SerializedName("vote_count")
+    val voteCount: String,
+
+    @SerializedName("vote_average")
+    val average: Float
 )

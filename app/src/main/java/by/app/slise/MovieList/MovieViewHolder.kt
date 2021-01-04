@@ -25,6 +25,8 @@ class MovieViewHolder(private val binding: ItemMovieBinding) :
         setName(movie)
         setThumbnail(movie)
         setClickListener(listener, movie)
+        setCount(movie)
+        setGenres(movie)
     }
 
     private fun setClickListener(
@@ -47,5 +49,13 @@ class MovieViewHolder(private val binding: ItemMovieBinding) :
             .fit()
             .centerCrop()
             .into(binding.movieThumbnail)
+    }
+
+    private fun setCount (movie: Movie) {
+        binding.textReviewsx.text = "${movie.voteCount} REVIEWS"
+    }
+
+    private fun setGenres (movie: Movie) {
+        binding.ratingBar.rating = movie.average
     }
 }

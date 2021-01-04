@@ -67,12 +67,12 @@
 
     <TextView
         android:id="@+id/text_style"
+        style="@style/RobotoNormal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/film_type"
-        style="@style/RobotoNormal"
-        android:layout_marginTop="214dp"
         android:layout_marginStart="6dp"
+        android:layout_marginTop="214dp"
+        android:text="@string/film_type"
         android:textColor="@color/pinkcolor"
         android:textSize="@dimen/text_small"
         app:layout_constraintEnd_toEndOf="@+id/movieThumbnail"
@@ -80,47 +80,6 @@
         app:layout_constraintStart_toStartOf="@+id/movieThumbnail"
         app:layout_constraintTop_toTopOf="@+id/movieThumbnail"
         tools:ignore="SmallSp" />
-
-    <ImageView
-        android:id="@+id/star_onex"
-        style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/star_threex"
-        app:layout_constraintTop_toBottomOf="@+id/text_style"
-        app:srcCompat="@drawable/staroink" />
-
-
-    <ImageView
-        android:id="@+id/star_twox"
-        style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/star_four"
-        app:layout_constraintTop_toBottomOf="@+id/text_style"
-        app:srcCompat="@drawable/staroink" />
-
-    <ImageView
-        android:id="@+id/star_threex"
-        style="@style/StarTwo"
-        android:layout_marginStart="6dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_style"
-        app:srcCompat="@drawable/staroink" />
-
-
-    <ImageView
-        android:id="@+id/star_four"
-        style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/star_onex"
-        app:layout_constraintTop_toBottomOf="@+id/text_style"
-        app:srcCompat="@drawable/staroink" />
-
-
-
-
-    <ImageView
-        android:id="@+id/star_five"
-        style="@style/StarTwo"
-        app:layout_constraintStart_toEndOf="@+id/star_twox"
-        app:layout_constraintTop_toBottomOf="@+id/text_style"
-        app:srcCompat="@drawable/stargrey" />
 
     <!--            1. на макете заголовок располагается не под постером. Середина заголовка выровнена по
     нижнему краю постера
@@ -135,19 +94,28 @@
     2. на макете есть отступ сверху равный 4dp-->
 
 
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="80dp"
+        android:layout_height="17dp"
+        android:numStars="5"
+        android:stepSize="0.1"
+        style="?android:attr/ratingBarStyleSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/movieThumbnail"
+        app:layout_constraintStart_toStartOf="@+id/text_style"
+        app:layout_constraintTop_toBottomOf="@+id/text_style" />
+
     <TextView
         android:id="@+id/text_reviewsx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+
         android:fontFamily="@font/roboto_medium"
         android:text="@string/_125_reviews"
         android:textColor="@color/greycolor"
         android:textSize="@dimen/text_small"
-        app:layout_constraintStart_toEndOf="@+id/star_five"
-        app:layout_constraintTop_toBottomOf="@+id/text_style"
-         />
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@+id/text_style" />
 
 
     <TextView
