@@ -30,7 +30,7 @@ class MoviesRepository(private val moviesApi: MoviesApi) {
             .flowOn(Dispatchers.IO)
             .onEach { Log.d(MoviesRepository::class.java.name, it.movies.toString()) }
             .flatMapMerge { it.movies.asFlow() }
-            .map { Movie(it.id, it.title, getPosterUrl(it), it.voteCount, it.average) }
+            .map { Movie(it.id, it.title, getPosterUrl(it), it.voteCount, it.average, it.adult, it.releaseDate) }
             .toList()
     }
 

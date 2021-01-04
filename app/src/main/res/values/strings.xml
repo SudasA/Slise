@@ -22,7 +22,7 @@
     <string name="movies_list">\t\t\t\t\t\t Movies List</string>     <!--   Linearlayout -->
     <string name="_125_reviews">125 Reviews</string>
     <string name="_137_min">137 min</string>
-    <string name="film_type">Action, Adventure, Fantasy</string>
+    <string name="film_type"></string>
     <string name="movies_placeholder">Start typing in a search bar to find a movie</string>
     <string name="error_unknown_on_download">Unexpected error while trying to fetch movies!</string>
     <string name="search_error">Something went wrong when downloading videos. Please, check your connection and try again</string>

@@ -1,5 +1,6 @@
 package by.app.slise.MovieList
 
+import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
 import by.app.slise.R
 import by.app.slise.databinding.ItemMovieBinding
@@ -27,6 +28,8 @@ class MovieViewHolder(private val binding: ItemMovieBinding) :
         setClickListener(listener, movie)
         setCount(movie)
         setGenres(movie)
+        setAdult(movie)
+        setDate(movie)
     }
 
     private fun setClickListener(
@@ -51,11 +54,23 @@ class MovieViewHolder(private val binding: ItemMovieBinding) :
             .into(binding.movieThumbnail)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setCount (movie: Movie) {
         binding.textReviewsx.text = "${movie.voteCount} REVIEWS"
     }
 
     private fun setGenres (movie: Movie) {
         binding.ratingBar.rating = movie.average
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setAdult (movie: Movie) {
+        if (movie.adult) {
+            binding.textDeprecateTwo.text = "18+"
+        }
+    }
+
+    private fun setDate (movie: Movie) {
+            binding.textMin.text = movie.releaseDate
     }
 }

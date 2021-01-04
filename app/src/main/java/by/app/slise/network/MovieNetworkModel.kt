@@ -20,5 +20,11 @@ data class MovieNetworkModel(
     val voteCount: String,
 
     @SerializedName("vote_average")
-    val average: Float
+    val average: Float,
+
+    @SerializedName("adult")
+    val adult: Boolean,
+
+    @SerializedName("release_date")
+    val releaseDate: String,
 )

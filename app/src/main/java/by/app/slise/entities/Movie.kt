@@ -5,5 +5,7 @@ data class Movie(
     val name: String,
     val thumbnail: String?,
     val voteCount : String,
-    val average: Float
+    val average: Float,
+    val adult: Boolean,
+    val releaseDate: String,
     )
