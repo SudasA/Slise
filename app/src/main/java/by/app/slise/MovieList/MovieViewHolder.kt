@@ -30,11 +30,12 @@ class MovieViewHolder(private val binding: ItemMovieBinding) :
         setGenres(movie)
         setAdult(movie)
         setDate(movie)
+        setGenre(movie)
     }
 
     private fun setClickListener(
-        listener: (Movie) -> Unit,
-        movie: Movie
+            listener: (Movie) -> Unit,
+            movie: Movie
     ) {
         itemView.setOnClickListener { listener(movie) }
     }
@@ -45,32 +46,64 @@ class MovieViewHolder(private val binding: ItemMovieBinding) :
 
     private fun setThumbnail(movie: Movie) {
         Picasso.get()
-            .load(movie.thumbnail)
-            .placeholder(R.drawable.ph_movie_grey_200)
-            .error(R.drawable.ph_movie_grey_200)
-            .transform(transformation)
-            .fit()
-            .centerCrop()
-            .into(binding.movieThumbnail)
+                .load(movie.thumbnail)
+                .placeholder(R.drawable.ph_movie_grey_200)
+                .error(R.drawable.ph_movie_grey_200)
+                .transform(transformation)
+                .fit()
+                .centerCrop()
+                .into(binding.movieThumbnail)
     }
 
     @SuppressLint("SetTextI18n")
-    private fun setCount (movie: Movie) {
+    private fun setCount(movie: Movie) {
         binding.textReviewsx.text = "${movie.voteCount} REVIEWS"
     }
 
-    private fun setGenres (movie: Movie) {
+    private fun setGenres(movie: Movie) {
         binding.ratingBar.rating = movie.average
     }
 
     @SuppressLint("SetTextI18n")
-    private fun setAdult (movie: Movie) {
+    private fun setAdult(movie: Movie) {
         if (movie.adult) {
             binding.textDeprecateTwo.text = "18+"
         }
     }
 
-    private fun setDate (movie: Movie) {
-            binding.textMin.text = movie.releaseDate
+    private fun setDate(movie: Movie) {
+        binding.textMin.text = movie.releaseDate
+    }
+
+    private fun setGenre(movie: Movie) {
+        binding.textStyle.text = change(movie).joinToString ()
+    }
+
+    private fun change(movie: Movie): MutableList<String> {
+        val lista = movie.genreIds
+        for (i in lista) {
+            when (i) {
+                "28" -> lista.set(lista.indexOf(i), "Action")
+                "12" -> lista.set(lista.indexOf(i), "Adventure")
+                "16" -> lista.set(lista.indexOf(i), "Animation")
+                "35" -> lista.set(lista.indexOf(i), "Comedy")
+                "80" -> lista.set(lista.indexOf(i), "Crime")
+                "99" -> lista.set(lista.indexOf(i), "Documentary")
+                "18" -> lista.set(lista.indexOf(i), "Drama")
+                "10751" -> lista.set(lista.indexOf(i), "Family")
+                "14" -> lista.set(lista.indexOf(i), "Fantasy")
+                "36" -> lista.set(lista.indexOf(i), "History")
+                "27" -> lista.set(lista.indexOf(i), "Horror")
+                "10402" -> lista.set(lista.indexOf(i), "Music")
+                "9648" -> lista.set(lista.indexOf(i), "Mystery")
+                "10749" -> lista.set(lista.indexOf(i), "Romance")
+                "878" -> lista.set(lista.indexOf(i), "Science Fiction")
+                "110770" -> lista.set(lista.indexOf(i), "Thriller")
+                "53" -> lista.set(lista.indexOf(i), "Action")
+                "10752" -> lista.set(lista.indexOf(i), "War")
+                "37" -> lista.set(lista.indexOf(i), "Western")
+                }
+            }
+        return lista
     }
 }

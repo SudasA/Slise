@@ -27,4 +27,7 @@ data class MovieNetworkModel(
 
     @SerializedName("release_date")
     val releaseDate: String,
+
+    @SerializedName("genre_ids")
+    val genreIds: MutableList<String>,
 )
