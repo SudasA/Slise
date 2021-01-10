@@ -1,5 +1,6 @@
 package by.app.slise.MovieDetails
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,89 +8,56 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import by.app.slise.R
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import com.squareup.picasso.Picasso
 
-class ActorsAdapter(
-): RecyclerView.Adapter<ActorsViewHolder>(){
+    class ActorsAdapter(
+        context: Context,
+        var actors: List<Actors>
+    ): RecyclerView.Adapter<ViewHolder>(){
 
-    private var actors: List<Actors> = listOf()
-
-    override fun getItemViewType(position: Int): Int {
-        return when(actors.size) {
-            0 -> VIEW_TYPE_EMPTY
-            else -> VIEW_TYPE_ACTORS
-        }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
-        return when (viewType) {
-            by.app.slise.MovieDetails.VIEW_TYPE_EMPTY -> by.app.slise.MovieDetails.EmptyViewHolder(
-                    LayoutInflater.from(
-                            parent.context
-                    ).inflate(R.layout.item_actors_data, parent, false)
-            )
-            else -> by.app.slise.MovieDetails.DataViewHolder(
-                    LayoutInflater.from(
-                            parent.context
-                    ).inflate(R.layout.item_actors_data, parent, false)
-            )
-        }
-    }
-
-    override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
-        when (holder) {
-            is DataViewHolder -> {
-                holder.onBind(actors[position])
-            }
-            is EmptyViewHolder -> { /* nothing to bind */}
-        }
-    }
+    private val inflater: LayoutInflater = LayoutInflater.from(context)
 
     override fun getItemCount(): Int = actors.size
 
-    fun bindActors(newActors: List<Actors>) {
-        actors = newActors
-    }
-}
+    fun getItem (position: Int): Actors = actors[position]
 
-abstract class  ActorsViewHolder (itemview: View) : RecyclerView.ViewHolder(itemview)
+        fun bindActors(newActors: List<Actors>) {
+            actors = newActors
+        }
 
-private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(inflater.inflate(R.layout.item_actors_data, parent, false))
+        }
 
-
-class DataViewHolder(itemView: View): ActorsViewHolder(itemView){
-
-    private var avatar: ImageView= itemView.findViewById(R.id.image_actors)
-    private val name: TextView = itemView.findViewById(R.id.text_actors)
-
-    fun onBind(actor: Actors) {
-
-           Glide.with(context)
-                    .load(actor.actorView)
-                    .apply(imageOption)
-                    .into(avatar)
-
-
-
-
-        name.text = actor.actorName
-
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(getItem(position))
+        }
     }
 
+     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+         private var avatar: ImageView= itemView.findViewById(R.id.image_actors)
+         private val name: TextView = itemView.findViewById(R.id.text_actors)
 
-    companion object {
-    private val imageOption = RequestOptions()
-            .placeholder(R.drawable.ic_avatar_placeholder)
-            .fallback(R.drawable.ic_avatar_placeholder)
-    }
-}
+         fun bind(actor: Actors) {
 
-private val RecyclerView.ViewHolder.context
-    get() = this.itemView.context
+             Picasso.get()
+                     .load(actor.actorView)
+                     .placeholder(R.drawable.ph_movie_grey_200)
+                     .error(R.drawable.ph_movie_grey_200)
+                     .fit()
+                     .centerCrop()
+                     .into(avatar)
+             name.text = actor.actorName
+         }
+     }
 
-private const val VIEW_TYPE_EMPTY = 0
-private const val VIEW_TYPE_ACTORS = 1
+
+
+
+
+
+
+
 
 
 
