@@ -16,6 +16,8 @@ class FragmentMoviesDetails : Fragment()  {
 
     private var movieFragmentckicklistener: MovieFragmentckicklistener? = null
 
+    private lateinit var movieDetailsViewModel: MovieDetailsViewModel
+
     private lateinit var adapter: ActorsAdapter
 
     override fun onCreateView(

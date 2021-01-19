@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import by.app.slise.R
+import by.app.slise.entities.Actors
 import com.squareup.picasso.Picasso
 
     class ActorsAdapter(
