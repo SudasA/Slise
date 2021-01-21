@@ -3,24 +3,25 @@
     <string name="avengers_movie_name">Avengers:\nEnd game</string>
     <string name="avengers_movie_name1">Avengers: End game</string>
     <!--    не говорящее название у строки. название строкового ресурса должно не дублировать свое содержимое, а указывать назначение строки. Лучше что-то наподобие genre_action_adventure_fantasy-->
-    <string name="action_adventure_fantasy">Action, Adventure, Fantasy</string>
     <!--    1. не говорящее название у строки. лучше что-то наподобие reviews_count
 2. Текст надо добавлять в ресурсы нормальным: "125 Reviews".
 Если необходимо вывести на экране с заглавными буквами, то в самом TextView для этого указывается свойство textAllCaps-->
-    <string name="reviews">125 Reviews</string>
+    <string name="reviews_count">125 reviews</string>
     <string name="storyline">Storyline</string>
     <!--    не говорящее название у строки. по имени строки должно быть понятно о чем она. Например avengers_movie_description-->
-    <string name="after">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="avengers_movie_description">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
     <string name="cast">Cast</string>
     <string name="robert_downey_jr">Robert\nDowney Jr.</string>
     <string name="chris_evans">Chris\nEvans</string>
     <string name="mark_ruffalo">Mark\nRuffalo</string>
     <string name="chris_hemsworth">Chris\nHemsworth</string>
     <!--    не говорящее название у строки. лучше что-то наподобие age_rating_13-->
-    <string name="_13">13+</string>
+    <string name="age_rating_13">13+</string>
     <string name="back">Back</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="movies_list">Movies List</string>
+    <string name="movies_list">\t\t\t\t\t\t Movies List</string>     <!--   Linearlayout -->
     <string name="_125_reviews">125 Reviews</string>
     <string name="_137_min">137 min</string>
+    <string name="film_type">Action, Adventure, Fantasy</string>
+
 </resources>
