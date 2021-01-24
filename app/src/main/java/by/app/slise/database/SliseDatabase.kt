@@ -9,7 +9,7 @@ import by.app.slise.dao.MoviesDao
 import by.app.slise.entities.Actors
 import by.app.slise.entities.Movie
 
-
+/*
 
 @Database(entities = [Movie::class, Actors::class], version = 1)
 abstract class SliseDatabase : RoomDatabase() {
@@ -30,3 +30,4 @@ abstract class SliseDatabase : RoomDatabase() {
                 .build()
         }
     }
+*/

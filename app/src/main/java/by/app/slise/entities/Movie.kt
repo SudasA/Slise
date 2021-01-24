@@ -14,6 +14,6 @@ data class Movie(
     val voteCount : String,
     val average: Float,
     val adult: Boolean,
-    val releaseDate: String,
+    val releaseDate: String?,
     val genreIds: MutableList<String>
     )
