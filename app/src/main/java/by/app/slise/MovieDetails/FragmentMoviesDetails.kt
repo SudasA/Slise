@@ -16,6 +16,8 @@ class FragmentMoviesDetails : Fragment()  {
 
     private var movieFragmentckicklistener: MovieFragmentckicklistener? = null
 
+    val actors: List<Actors> = listOf()
+
     private lateinit var adapter: ActorsAdapter
 
     override fun onCreateView(
@@ -33,7 +35,7 @@ class FragmentMoviesDetails : Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val recycler: RecyclerView = view.findViewById(R.id.r_actors)
-        adapter = ActorsAdapter()
+        adapter = ActorsAdapter(view.context,actors)
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = adapter
         recycler.layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)

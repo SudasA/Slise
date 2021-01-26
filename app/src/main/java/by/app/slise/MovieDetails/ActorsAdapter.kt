@@ -1,5 +1,6 @@
 package by.app.slise.MovieDetails
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,59 +12,35 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class ActorsAdapter(
-): RecyclerView.Adapter<ActorsViewHolder>(){
+    context: Context,
+    var actors: List<Actors>
+): RecyclerView.Adapter<ViewHolder>(){
 
-    private var actors: List<Actors> = listOf()
+    private val inflater: LayoutInflater = LayoutInflater.from(context)
 
-    override fun getItemViewType(position: Int): Int {
-        return when(actors.size) {
-            0 -> VIEW_TYPE_EMPTY
-            else -> VIEW_TYPE_ACTORS
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(inflater.inflate(R.layout.item_actors_data, parent, false))
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
-        return when (viewType) {
-            by.app.slise.MovieDetails.VIEW_TYPE_EMPTY -> by.app.slise.MovieDetails.EmptyViewHolder(
-                    LayoutInflater.from(
-                            parent.context
-                    ).inflate(R.layout.item_actors_data, parent, false)
-            )
-            else -> by.app.slise.MovieDetails.DataViewHolder(
-                    LayoutInflater.from(
-                            parent.context
-                    ).inflate(R.layout.item_actors_data, parent, false)
-            )
-        }
-    }
-
-    override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
-        when (holder) {
-            is DataViewHolder -> {
-                holder.onBind(actors[position])
-            }
-            is EmptyViewHolder -> { /* nothing to bind */}
-        }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(getItem(position))
     }
 
     override fun getItemCount(): Int = actors.size
+
+    fun getItem (position: Int): Actors = actors[position]
 
     fun bindActors(newActors: List<Actors>) {
         actors = newActors
     }
 }
 
-abstract class  ActorsViewHolder (itemview: View) : RecyclerView.ViewHolder(itemview)
 
-private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
-
-
-class DataViewHolder(itemView: View): ActorsViewHolder(itemView){
-
+class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
     private var avatar: ImageView= itemView.findViewById(R.id.image_actors)
     private val name: TextView = itemView.findViewById(R.id.text_actors)
 
-    fun onBind(actor: Actors) {
+    fun bind(actor: Actors) {
 
            Glide.with(context)
                     .load(actor.actorView)
@@ -88,8 +65,10 @@ class DataViewHolder(itemView: View): ActorsViewHolder(itemView){
 private val RecyclerView.ViewHolder.context
     get() = this.itemView.context
 
-private const val VIEW_TYPE_EMPTY = 0
-private const val VIEW_TYPE_ACTORS = 1
+
+
+
+
 
 
 
