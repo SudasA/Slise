@@ -1,4 +1,4 @@
-package com.android.academy.fundamentals.homework.data
+package by.app.slise.data
 
 import android.content.Context
 import by.app.slise.model.Actor

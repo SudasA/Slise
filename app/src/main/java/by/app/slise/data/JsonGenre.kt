@@ -1,4 +1,4 @@
-package com.android.academy.fundamentals.homework.data
+package by.app.slise.data
 
 import kotlinx.serialization.Serializable
 

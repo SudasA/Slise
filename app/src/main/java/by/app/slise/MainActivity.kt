@@ -8,8 +8,8 @@ import by.app.slise.di.MovieRepositoryProvider
 import by.app.slise.model.Movie
 import by.app.slise.moviedetails.MovieDetailsFragment
 import by.app.slise.movies.MoviesListFragment
-import com.android.academy.fundamentals.homework.data.JsonMovieRepository
-import com.android.academy.fundamentals.homework.data.MovieRepository
+import by.app.slise.data.JsonMovieRepository
+import by.app.slise.data.MovieRepository
 
 
 class MainActivity : AppCompatActivity(),
