@@ -5,6 +5,7 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.create
 
 object NetworkModule {
 
@@ -24,4 +25,6 @@ object NetworkModule {
         .addConverterFactory(json.asConverterFactory(contentType))
         .client(client)
         .build()
+
+    val tmdbEndpoints: TmdbEndpoints = retrofit.create()
 }
