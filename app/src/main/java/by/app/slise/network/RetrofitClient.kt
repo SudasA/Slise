@@ -1,6 +1,5 @@
 package by.app.slise.network
 
-import by.app.slise.BuildConfig
 import by.app.slise.networkConnectionInterceptor
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
