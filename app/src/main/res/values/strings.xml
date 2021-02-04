@@ -1,21 +1,40 @@
 <resources>
-
-    <string name="app_name">Fundamentals Homework</string>
-
-    <!-- Movies list screen -->
-    <string name="movies_list_title">Movies app</string>
-    <string name="movies_list_header_text">Movies app</string>
-    <string name="movies_list_header_icon_description">Target icon</string>
-    <string name="movies_list_allowed_age_template">%d+</string>
-    <string name="movies_list_reviews_template">%d REVIEWS</string>
-    <string name="movies_list_rating_bar_description">Rating bar</string>
-    <string name="movies_list_film_time">%d MIN</string>
-    <!-- Movies list screen -->
-
-    <!-- Movie Details screen -->
+    <string name="app_name">AndroidAcademyProject</string>
+    <string name="avengers_genre">Action, Adventure, Fantasy</string>
+    <string name="avengers_title">Avengers:\nEnd Game</string>
+    <string name="reviews_count">125 Reviews</string>
+    <string name="storyline">Storyline</string>
+    <string name="avengers_storyline">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="cast">Cast</string>
+    <string name="robert_downey_jr">Robert\nDowney Jr.</string>
+    <string name="chris_evans">Chris\nEvans</string>
+    <string name="mark_ruffalo">Mark\nRuffalo</string>
+    <string name="chris_hemsworth">Chris\nHemsworth</string>
     <string name="back">Back</string>
-    <string name="storyline_title">Storyline</string>
-    <string name="cast_title">Cast</string>
-    <!-- Movie Details screen -->
-
+    <string name="age_non_adult">13+</string>
+    <string name="age_adult">16+</string>
+    <string name="movies_list">Movies list</string>
+    <string name="avengers_age_limit">13+</string>
+    <string name="movie_list">Movies list</string>
+    <string name="avengers_end_game_movie_list">Avengers: End Game</string>
+    <string name="tenet">Tenet</string>
+    <string name="black_widow">Black Widow</string>
+    <string name="wonder_woman_1984">Wonder Woman 1984</string>
+    <string name="avengers_duration">137 min</string>
+    <string name="action_adventure_drama">Action, Adventure, Drama</string>
+    <string name="tenet_duration">97 min</string>
+    <string name="tenet_reviews">98 reviews</string>
+    <string name="action_sci_fi_thriller">Action, Sci-Fi, Thriller</string>
+    <string name="widow_reviews">38 reviews</string>
+    <string name="widow_duration">102 min</string>
+    <string name="action_adventure_sci_fi">Action, Adventure, Sci-Fi</string>
+    <string name="wonderwoman_reviews">74 reviews</string>
+    <string name="action_adventure_fantasy">Action, Adventure, Fantasy</string>
+    <string name="wonderwoman_duration">120 min</string>
+    <string name="tenet_age_limit">16+</string>
+    <string name="duration">%d min</string>
+    <string name="reviews">%d reviews</string>
+    <string name="age_limit">%d+</string>
+    <string name="error_loading_title">Error while loading movie</string>
+    <string name="error_show_movie_details">Error while opening movie</string>
 </resources>

@@ -1,9 +1,16 @@
 package by.app.slise.model
 
-import java.io.Serializable
+import kotlinx.serialization.SerialName
 
+
+@kotlinx.serialization.Serializable
 data class Actor(
-    val id: Int,
-    val name: String,
-    val imageUrl: String,
-) : Serializable
+        @SerialName("id")
+        val id: Int,
+
+        @SerialName("name")
+        val name: String,
+
+        @SerialName("profile_path")
+        val picture: String?
+)
