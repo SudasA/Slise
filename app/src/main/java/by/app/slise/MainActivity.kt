@@ -1,66 +1,50 @@
 package by.app.slise
 
-
-
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import by.app.slise.di.MovieRepositoryProvider
-import by.app.slise.model.Movie
-import by.app.slise.moviedetails.MovieDetailsFragment
-import by.app.slise.movies.MoviesListFragment
-import com.android.academy.fundamentals.homework.data.JsonMovieRepository
-import com.android.academy.fundamentals.homework.data.MovieRepository
+import android.os.Bundle
+import android.util.Log
+import by.app.slise.movies.FragmentMoviesList
+import com.stopkaaaa.androidacademyproject.ui.moviesdetails.FragmentMoviesDetails
 
+class MainActivity : AppCompatActivity(), MovieClickListener {
 
-class MainActivity : AppCompatActivity(),
-    MoviesListFragment.MoviesListItemClickListener,
-    MovieDetailsFragment.MovieDetailsBackClickListener,
-    MovieRepositoryProvider {
+    private val moviesList = FragmentMoviesList()
 
-    private val jsonMovieRepository = JsonMovieRepository(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-            routeToMoviesList()
+            supportFragmentManager.beginTransaction()
+                .apply {
+                    add(R.id.fragments_container, moviesList)
+                    commit()
+                }
+        }
+
+    }
+
+    override fun onBackPressed() {
+        if (supportFragmentManager.backStackEntryCount > 1) {
+            backPressed()
+        } else {
+            super.onBackPressed()
         }
     }
 
-    override fun onMovieSelected(movie: Movie) {
-        routeToMovieDetails(movie)
-    }
-
-    override fun onMovieDeselected() {
-        routeBack()
-    }
-
-    private fun routeToMoviesList() {
-        supportFragmentManager.beginTransaction()
-            .replace(
-                R.id.container,
-                MoviesListFragment.create(),
-                MoviesListFragment::class.java.simpleName
-            )
-            .addToBackStack("trans:${MoviesListFragment::class.java.simpleName}")
-            .commit()
-    }
-
-    private fun routeToMovieDetails(movie: Movie) {
-        supportFragmentManager.beginTransaction()
-            .add(
-                R.id.container,
-                MovieDetailsFragment.create(movie.id),
-                MovieDetailsFragment::class.java.simpleName
-            )
-            .addToBackStack("trans:${MovieDetailsFragment::class.java.simpleName}")
-            .commit()
-    }
-
-    private fun routeBack() {
+    override fun backPressed() {
         supportFragmentManager.popBackStack()
+        Log.i("MainActivity", "backStackEntryCount: ${supportFragmentManager.backStackEntryCount}")
     }
 
-    override fun provideMovieRepository(): MovieRepository = jsonMovieRepository
+    override fun movieClicked(movieId: Int) {
+        supportFragmentManager.beginTransaction()
+            .apply {
+                add(R.id.fragments_container, FragmentMoviesDetails.newInstance(movieId))
+                addToBackStack("movieDetails")
+                commit()
+            }
+        Log.i("MainActivity", "backStackEntryCount: ${supportFragmentManager.backStackEntryCount}")
+    }
 }
