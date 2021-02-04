@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import by.app.slise.R
 import by.app.slise.databinding.FragmentMoviesListBinding
 import by.app.slise.paging.PaginationState
-import com.stopkaaaa.androidacademyproject.adapters.MovieListItemDecoration
+import by.app.slise.adapters.MovieListItemDecoration
 import by.app.slise.adapters.MoviesPagedListAdapter
 import by.app.slise.MovieClickListener
 

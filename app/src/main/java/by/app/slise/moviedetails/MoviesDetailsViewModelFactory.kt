@@ -1,8 +1,7 @@
-package com.stopkaaaa.androidacademyproject.ui.moviesdetails
+package by.app.slise.moviedetails
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import by.app.slise.moviedetails.MoviesDetailsViewModel
 
 
 class MoviesDetailsViewModelFactory(

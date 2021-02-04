@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import by.app.slise.movies.FragmentMoviesList
-import com.stopkaaaa.androidacademyproject.ui.moviesdetails.FragmentMoviesDetails
+import by.app.slise.moviedetails.FragmentMoviesDetails
 
 class MainActivity : AppCompatActivity(), MovieClickListener {
 

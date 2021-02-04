@@ -1,4 +1,4 @@
-package com.stopkaaaa.androidacademyproject.adapters
+package by.app.slise.adapters
 
 import android.graphics.Rect
 import android.view.View

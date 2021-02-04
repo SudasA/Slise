@@ -1,4 +1,4 @@
-package com.stopkaaaa.androidacademyproject.ui.moviesdetails
+package by.app.slise.moviedetails
 
 import android.content.Context
 import android.os.Bundle
@@ -13,11 +13,10 @@ import by.app.slise.databinding.FragmentMoviesDetailsBinding
 import by.app.slise.model.Actor
 import by.app.slise.model.Movie
 import coil.load
-import com.stopkaaaa.androidacademyproject.adapters.ActorListAdapter
-import com.stopkaaaa.androidacademyproject.adapters.ActorListItemDecorator
+import by.app.slise.adapters.ActorListAdapter
+import by.app.slise.adapters.ActorListItemDecorator
 
 import by.app.slise.MovieClickListener
-import by.app.slise.moviedetails.MoviesDetailsViewModel
 import java.lang.IllegalArgumentException
 import kotlin.properties.Delegates
 
